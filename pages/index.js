@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
-import { Button } from 'antd';
+
+import Page from '../components/Page';
 
 // This gets called on every request
 export async function getServerSideProps() {
@@ -16,15 +17,13 @@ export async function getServerSideProps() {
 
 export default function Home({ data }) {
   return (
-    <div>
-      <h1>Cale</h1>
-      <Button href="/log" type="primary">Log Today</Button>
-      foo
+    <Page title="Cale">
+      
       <ul>
         {data?.items?.map((item) => (
           <li key={item.id}>Rating: {item.rating}</li>
         ))}
       </ul>
-    </div>
+    </Page>
   );
 }
