@@ -14,7 +14,7 @@ docker-compose up -d --build
 ```
 
 - UI: http://localhost:3000
-- PocketBase Admin: http://localhost:8090/_
+- PocketBase Admin: [http://localhost:8090/_](http://localhost:8090/_)
 - PocketBase REST API: http://localhost:8090/api
 
 ## Shut Down the Solution
