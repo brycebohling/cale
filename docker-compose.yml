@@ -1,0 +1,30 @@
+# docker-compose.yml
+
+version: "3"
+
+services:
+  pocketbase:
+    image: augustodelg/pocketbase:latest
+    restart: unless-stopped
+    ports:
+      - 8090:8090
+    volumes:
+      - ./pb_data:/pb_data
+  web:
+    depends_on:
+      - pocketbase
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: bryce/cale:v1
+    container_name: web
+    restart: unless-stopped
+    volumes:
+      - ./:/app
+      - /app/node_modules
+      - /app/.next
+    ports:
+      - 3000:3000
+
+volumes:
+  pb_data:
