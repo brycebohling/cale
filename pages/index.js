@@ -19,7 +19,7 @@ export default function Home({ data }) {
     <div>
       <h1>Cale</h1>
       <Button href="/log" type="primary">Log Today</Button>
-
+      foo
       <ul>
         {data?.items?.map((item) => (
           <li key={item.id}>Rating: {item.rating}</li>
