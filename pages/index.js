@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 
-import Page from '../components/Page';
+import Page from "../components/Page";
 
 // This gets called on every request
 export async function getServerSideProps() {
@@ -18,7 +18,6 @@ export async function getServerSideProps() {
 export default function Home({ data }) {
   return (
     <Page title="Cale">
-      
       <ul>
         {data?.items?.map((item) => (
           <li key={item.id}>Rating: {item.rating}</li>

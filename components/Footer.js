@@ -2,7 +2,7 @@
 
 function Footer() {
 
-    return (<>This is the footer</>)
+    return 
 
 }
 
